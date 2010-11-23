@@ -1,3 +1,2 @@
 module Finger
-  # Your code goes here...
 end

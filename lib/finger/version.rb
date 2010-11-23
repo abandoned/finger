@@ -1,3 +1,3 @@
 module Finger
-  VERSION = "0.0.1"
+  VERSION = "0.0.2"
 end

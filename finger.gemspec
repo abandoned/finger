@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Hakan Ensari"]
   s.email       = ["hakan.ensari@papercavalier.com"]
   s.homepage    = "http://github.com/papercavalier/finger"
-  s.summary     = %q{Write a gem summary}
-  s.description = %q{Write a gem description}
+  s.summary     = %q{User information lookup program}
+  s.description = %q{Finger is a user information lookup program.}
 
   s.rubyforge_project = "finger"
 
@@ -18,4 +18,13 @@ Gem::Specification.new do |s|
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
+
+  s.add_development_dependency "cucumber"
+  s.add_development_dependency "aruba"
+  s.add_development_dependency "rspec"
+  if RUBY_VERSION.include?("1.9")
+    s.add_development_dependency "ruby-debug19"
+  else
+    s.add_development_dependency "ruby-debug"
+  end
 end
